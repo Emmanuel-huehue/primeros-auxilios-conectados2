@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeros Auxilios Conectados</title>
+    <style>
+        /* Estilos CSS Integrados */
+        :root {
+            --primary-color: #6a1b9a; /* Morado Principal */
+            --secondary-color: #e1bee7; /* Morado Claro (para acentos o fondos suaves) */
+            --background-color: #f3e5f5; /* Fondo general muy claro, tono morado */
+            --text-color: #333333;
+            --white-color: #ffffff;
+            --heading-color: #4a148c; /* Morado más oscuro para títulos */
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif; /* Fuente simple y legible */
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.7; /* Aumenta un poco el interlineado */
+        }
+
+        header {
+            background-color: var(--primary-color);
+            text-align: center;
+            padding: 20px 15px;
+            border-bottom: 5px solid var(--heading-color);
+        }
+
+        header img#logo {
+            max-width: 300px; /* Ajusta según sea necesario */
+            height: auto;
+            display: block; /* Asegura que ocupe su propio espacio */
+            margin: 0 auto; /* Centra la imagen */
+            background-color: var(--white-color); /* Fondo blanco detrás del logo si tiene transparencia */
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 25px 30px;
+            background-color: var(--white-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 45px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--secondary-color);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 15px;
+        }
+
+        section h2 {
+            color: var(--heading-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 0; /* Evita doble margen superior */
+            margin-bottom: 25px;
+            font-size: 2em; /* Tamaño de título más grande */
+            font-weight: bold;
+        }
+
+        section p, section ul, section ol {
+            margin-bottom: 18px; /* Espacio después de párrafos y listas */
+            font-size: 1.1em; /* Texto ligeramente más grande */
+        }
+
+        .intro-paragraph {
+            background-color: var(--secondary-color);
+            color: var(--heading-color);
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            font-style: italic;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .image-gallery {
+            display: flex; /* Usa flexbox para alinear imágenes */
+            flex-wrap: wrap; /* Permite que las imágenes pasen a la siguiente línea */
+            gap: 15px; /* Espacio entre imágenes */
+            margin-top: 20px;
+            justify-content: center; /* Centra las imágenes si no llenan el espacio */
+        }
+
+        .image-gallery img {
+            max-width: 280px; /* Ancho máximo por imagen */
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            flex-grow: 1; /* Permite que crezcan para llenar espacio, hasta max-width */
+        }
+
+        strong {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 25px;
+            padding-left: 10px;
+        }
+         ol {
+             list-style-type: decimal;
+             margin-left: 25px;
+             padding-left: 10px;
+         }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px;
+            background-color: var(--heading-color);
+            color: var(--white-color);
+            font-size: 0.95em;
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+             header img#logo {
+                 max-width: 250px;
+                 padding: 8px;
+             }
+            main {
+                margin: 20px 15px;
+                padding: 20px;
+            }
+            section h2 {
+                font-size: 1.7em;
+            }
+            section p, section ul, section ol {
+                font-size: 1em;
+            }
+            .image-gallery img {
+                 max-width: 45%; /* Dos imágenes por fila aprox */
+             }
+        }
+
+         @media (max-width: 480px) {
+             header img#logo {
+                 max-width: 200px;
+                 padding: 5px;
+             }
+             section h2 {
+                 font-size: 1.5em;
+             }
+             .image-gallery img {
+                  max-width: 80%; /* Una imagen por fila */
+                  margin: 0 auto; /* Centrar imagen única */
+              }
+         }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Asegúrate que el archivo logo_pa_conectados.jpg esté en la misma carpeta -->
+        <img id="logo" src="img/IMG_20250501_161225_694.jpg" alt="Logo Primeros Auxilios Conectados">
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>Bienvenido a Primeros Auxilios Conectados</h2>
+            <p class="intro-paragraph">
+                Este sitio web está hecho por alumnas de la promoción 17 del Colegio Integral Guayana, con el objetivo de concientizar e informar correctamente sobre la aplicación de los primeros auxilios en diversas situaciones de emergencia. ¡El conocimiento salva vidas!
+            </p>
+            <p>Aquí encontrarás información básica y pasos a seguir en casos comunes como hemorragias, heridas, esguinces, quemaduras, y situaciones que requieren RCP o la maniobra de Heimlich. Recuerda que esta guía es informativa y no reemplaza la formación profesional certificada.</p>
+        </section>
+
+        <section id="hemorragias">
+            <h2>Control de Hemorragias</h2>
+            <p>Una hemorragia es la pérdida de sangre. Identificar su gravedad y actuar rápidamente es vital.</p>
+            <p><strong>¿Cómo detectar la gravedad?</strong></p>
+            <ul>
+                <li><strong>Hemorragia Capilar:</strong> Sangrado superficial, lento y en poca cantidad (raspones). Generalmente se detiene sola.</li>
+                <li><strong>Hemorragia Venosa:</strong> Sangre de color rojo oscuro, flujo continuo y uniforme. Puede ser abundante.</li>
+                <li><strong>Hemorragia Arterial:</strong> Sangre de color rojo brillante, sale a borbotones (pulsátil) al ritmo del corazón. ¡Es la más grave y requiere atención inmediata!</li>
+            </ul>
+            <p><strong>¿Cómo detener el sangrado externo?</strong></p>
+            <ol>
+                <li><strong>Presión Directa:</strong> Coloca una gasa estéril o paño limpio sobre la herida y presiona firmemente con la palma de la mano. Mantén la presión constante.</li>
+                <li><strong>Elevación:</strong> Si la herida está en un brazo o pierna y no sospechas fractura, elévala por encima del nivel del corazón mientras mantienes la presión.</li>
+                <li><strong>No retires el primer apósito:</strong> Si la gasa se empapa, no la quites. Coloca otra encima y sigue presionando.</li>
+                <li><strong>Presión Indirecta (Puntos de Presión):</strong> Solo si la hemorragia es arterial y no se controla con presión directa y elevación, aplica presión sobre la arteria principal que irriga la zona (braquial en el brazo, femoral en la ingle) contra el hueso. <strong>Esto requiere conocimiento específico.</strong></li>
+                <li><strong>Llama a Emergencias:</strong> Ante cualquier hemorragia abundante, que no cede, o si es arterial, llama inmediatamente a los servicios de emergencia (ej. 112, 911).</li>
+            </ol>
+            <div class="image-gallery">
+                <!-- Asegúrate que los archivos hemorragia_1.jpg y hemorragia_2.jpg estén en la carpeta -->
+                <img src="img/GettyImages-934403506-accident emergency.jpg" width="900" height="500"> 
+                <img src="img/depositphotos_90993194-stock-illustration-first-control-bleeding-aid-elevating.jpg" alt="Primeros auxilios con vendaje compresivo">
+            </div>
+        </section>
+
+        <section id="heridas">
+            <h2>Heridas</h2>
+            <p>Las heridas son lesiones que rompen la continuidad de la piel o mucosas. Las más comunes incluyen cortes, abrasiones (raspones) y punciones. Para ayudar con heridas menores, el primer paso es lavarse bien las manos y luego limpiar suavemente la herida con agua y jabón neutro, retirando cualquier suciedad visible. Después, se puede aplicar un antiséptico suave y cubrir la lesión con un apósito estéril o venda limpia para protegerla de infecciones, cambiándolo si se ensucia o moja. Es crucial buscar atención médica si la herida es profunda, extensa, sangra mucho, tiene objetos incrustados, fue causada por mordedura, o muestra signos de infección (pus, enrojecimiento excesivo, calor, fiebre).</p>
+             <div class="image-gallery">
+                 <!-- Asegúrate que los archivos herida_1.jpg y herida_2.jpg estén en la carpeta -->
+                <img src="img/Herida.png" alt="Limpiando una herida superficial en el brazo con una gasa">
+                <img src="img/arm-large-abrasion-wound-600nw-2503248311.webp" alt="Abrasión o raspón en un codo">
+            </div>
+        </section>
+
+        <section id="esguinces">
+            <h2>Esguinces</h2>
+            <p>Un esguince ocurre cuando los ligamentos que unen los huesos en una articulación se estiran demasiado o se desgarran, generalmente debido a una torcedura, caída o golpe brusco. Las articulaciones más afectadas suelen ser tobillos, muñecas y rodillas.</p>
+            <p><strong>Cómo ayudar en caso de esguince (Método RICE):</strong></p>
+            <ul>
+                <li><strong>Reposo (Rest):</strong> Evitar mover o cargar peso sobre la articulación lesionada.</li>
+                <li><strong>Hielo (Ice):</strong> Aplicar compresas frías o hielo envuelto en un paño durante 15-20 minutos cada 2-3 horas, especialmente las primeras 48 horas, para reducir dolor e inflamación.</li>
+                <li><strong>Compresión (Compression):</strong> Vendar la articulación con una venda elástica (sin apretar demasiado para no cortar la circulación) para dar soporte y limitar la hinchazón.</li>
+                <li><strong>Elevación (Elevation):</strong> Mantener la extremidad lesionada elevada por encima del nivel del corazón siempre que sea posible.</li>
+            </ul>
+            <p>Se debe buscar evaluación médica si hay dolor intenso, incapacidad para mover la articulación, deformidad visible o si no hay mejoría.</p>
+             <div class="image-gallery">
+                 <!-- Asegúrate que el archivo esguince_1.jpg esté en la carpeta -->
+                <img src="img/tobillo.png" alt="Ilustración de un tobillo inflamado por esguince">
+            </div>
+        </section>
+
+        <section id="quemaduras">
+            <h2>Quemaduras</h2>
+            <p>Las quemaduras son lesiones causadas por calor, químicos, electricidad o radiación. Se clasifican según su profundidad:</p>
+            <ul>
+                <li><strong>Quemaduras de Primer Grado:</strong> Afectan solo la capa externa de la piel (epidermis). Causan enrojecimiento, dolor e hinchazón leve. <strong>Recomendación:</strong> Enfriar la zona con agua corriente fría (no helada) durante 10-15 minutos. Aplicar crema hidratante o gel de aloe vera. No requieren cubrirse usualmente.</li>
+                <li><strong>Quemaduras de Segundo Grado:</strong> Afectan la epidermis y parte de la dermis. Causan enrojecimiento intenso, dolor, ampollas e hinchazón significativa. Pueden ser superficiales o profundas. <strong>Recomendación:</strong> Enfriar con agua fría abundante. No romper las ampollas. Cubrir con apósito estéril antiadherente y buscar atención médica, especialmente si son extensas o en zonas delicadas.</li>
+                <li><strong>Quemaduras de Tercer Grado:</strong> Destruyen todas las capas de la piel e incluso pueden afectar tejidos más profundos (músculos, huesos). La piel puede verse carbonizada, blanca o correosa. Puede haber poco o ningún dolor inicial por daño nervioso. <strong>Recomendación:</strong> ¡Emergencia médica! Llamar inmediatamente a los servicios de urgencia. No retirar ropa pegada. Cubrir la zona con un paño limpio y seco mientras llega la ayuda. No aplicar agua ni ungüentos.</li>
+            </ul>
+             <div class="image-gallery">
+                 <!-- Asegúrate que los archivos quemadura_1.jpg, quemadura_2.jpg y quemadura_3.jpg estén en la carpeta -->
+                <img src="img/quemadura-primer-grado-scaled.jpg" alt="Quemadura de primer grado en un antebrazo, piel enrojecida">
+                <img src="img/second-degree-burn-on-arm.jpg" alt="Quemadura de segundo grado con ampollas en un brazo">
+                <img src="img/pngtree-closeup-view-of-thirddegree-or-partial-thickness-burn-photo-image_45147042.jpg" alt="Quemadura grave, posiblemente de tercer grado, en una pierna">
+            </div>
+        </section>
+
+        <section id="rcp">
+            <h2>Reanimación Cardiopulmonar (RCP)</h2>
+            <p>La RCP sirve para intentar mantener el flujo de sangre oxigenada al cerebro y otros órganos vitales cuando una persona ha dejado de respirar y su corazón ha dejado de latir (parada cardiorrespiratoria).</p>
+            <p><strong>Cómo aplicar RCP básica (solo compresiones para público general):</strong></p>
+            <ol>
+                <li><strong>Seguridad y Respuesta:</strong> Asegura la zona. Comprueba si la víctima responde (sacúdela suavemente por los hombros y pregúntale en voz alta).</li>
+                <li><strong>Pedir Ayuda:</strong> Si no responde, grita pidiendo ayuda y llama (o pide a alguien que llame) a emergencias inmediatamente. Pide un Desfibrilador Externo Automático (DEA) si hay uno disponible.</li>
+                <li><strong>Comprobar Respiración:</strong> Abre la vía aérea (inclina la cabeza hacia atrás y eleva el mentón). Mira, escucha y siente si respira normalmente durante máximo 10 segundos. Si no respira o solo jadea/boquea, inicia compresiones.</li>
+                <li><strong>Compresiones Torácicas:</strong>
+                    <ul>
+                        <li>Arrodíllate al lado de la víctima.</li>
+                        <li>Coloca el talón de una mano en el centro del pecho (mitad inferior del esternón). Pon la otra mano encima y entrelaza los dedos.</li>
+                        <li>Con los brazos rectos, comprime el pecho hacia abajo unos 5-6 cm (adultos).</li>
+                        <li>Realiza compresiones a un ritmo de 100-120 por minuto (rápido y constante).</li>
+                        <li>Deja que el pecho se expanda completamente entre compresiones.</li>
+                    </ul>
+                </li>
+                <li><strong>Continuar:</strong> Sigue las compresiones sin parar hasta que llegue ayuda profesional, la víctima reaccione, o estés agotado. Si llega un DEA, úsalo siguiendo sus instrucciones.</li>
+            </ol>
+            <p><strong>Riesgos:</strong> Aunque vital, la RCP puede causar fracturas de costillas o lesiones internas. Sin embargo, el riesgo de no hacer nada en una parada cardíaca es la muerte. <strong>Es fundamental recibir formación práctica en RCP.</strong></p>
+             <div class="image-gallery">
+                 <!-- Asegúrate que el archivo rcp_1.jpg esté en la carpeta -->
+                <img src="img/Ventajas-RCP-e1636533528912.jpg" alt="Manos realizando compresiones torácicas en un maniquí de RCP">
+            </div>
+        </section>
+
+        <section id="heimlich">
+            <h2>Maniobra de Heimlich</h2>
+            <p>La maniobra de Heimlich (compresiones abdominales) es una técnica de primeros auxilios para desobstruir el conducto respiratorio, normalmente bloqueado por un trozo de alimento u otro objeto. Se aplica cuando la persona se está atragantando y no puede respirar, toser o hablar.</p>
+            <p><strong>Cómo aplicarla correctamente:</strong></p>
+            <ul>
+                <li><strong>Adultos y Niños mayores de 1 año (Conscientes):</strong>
+                    <ol>
+                        <li>Párate detrás de la persona y rodea su cintura con tus brazos.</li>
+                        <li>Forma un puño con una mano y colócalo entre el ombligo y la punta del esternón.</li>
+                        <li>Agarra el puño con la otra mano.</li>
+                        <li>Realiza compresiones rápidas y fuertes hacia adentro y hacia arriba, hasta que expulse el objeto o pierda el conocimiento.</li>
+                    </ol>
+                </li>
+                 <li><strong>Bebés menores de 1 año (Conscientes):</strong>
+                     <ol>
+                         <li>Sostén al bebé boca abajo sobre tu antebrazo, apoyado en tu muslo, con la cabeza más baja que el tronco.</li>
+                         <li>Da 5 golpes firmes en la espalda, entre los omóplatos, con el talón de tu mano.</li>
+                         <li>Si no funciona, gíralo boca arriba sobre tu otro antebrazo.</li>
+                         <li>Realiza 5 compresiones en el centro del pecho (justo debajo de la línea de los pezones) con dos dedos.</li>
+                         <li>Alterna 5 golpes en la espalda y 5 compresiones en el pecho hasta que expulse el objeto o quede inconsciente.</li>
+                     </ol>
+                 </li>
+                  <li><strong>Personas Obesas o Embarazadas (Conscientes):</strong> Realiza las compresiones en el centro del pecho, en lugar del abdomen.</li>
+                   <li><strong>Si la Persona Pierde el Conocimiento:</strong> Colócala suavemente en el suelo, llama a emergencias e inicia RCP. Antes de intentar ventilaciones (si estás entrenado), revisa la boca por si ves el objeto y puedes extraerlo con cuidado.</li>
+            </ul>
+            <p><strong>Riesgos:</strong> La maniobra puede causar lesiones internas (costillas, órganos abdominales). Cualquier persona que haya recibido la maniobra de Heimlich debe ser evaluada por un médico después, incluso si parece estar bien.</p>
+             <div class="image-gallery">
+                 <!-- Asegúrate que el archivo heimlich_1.jpg esté en la carpeta -->
+                <img src="img/depositphotos_624339248-stock-illustration-set-first-aid-food-choking.jpg" alt="Ilustración de la maniobra de Heimlich en bebé y adulto">
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><strong>Descargo de Responsabilidad:</strong> Esta página es un recurso informativo creado por estudiantes.</p>
+        <p>La información aquí presentada no reemplaza la consulta médica profesional ni la formación certificada en primeros auxilios.</p>
+        <p>En caso de emergencia, contacta inmediatamente a los servicios médicos de tu localidad.</p>
+        <p>© 2025 (o año actual) Primeros Auxilios Conectados - Promoción 17 Colegio Integral Guayana.</p>
+    </footer>
+
+    <script>
+        // JavaScript Integrado (Mínimo)
+
+        console.log("Página Primeros Auxilios Conectados (Tema Morado) cargada.");
+
+        // No se requiere JS complejo para una página estática como esta.
+        // Podría usarse para efectos visuales menores o navegación suave si se añadiera un menú.
+
+        // Ejemplo: Obtener el año actual para el footer automáticamente
+        // const currentYear = new Date().getFullYear();
+        // const footerCopyright = document.querySelector('footer p:last-of-type');
+        // if (footerCopyright) {
+        //     footerCopyright.textContent = footerCopyright.textContent.replace('(o año actual)', currentYear);
+        // }
+
+    </script>
+
+</body>
+</html>
